@@ -2,16 +2,16 @@ import json
 from enum import Enum
 from typing import Any, Dict, List, Optional
 
-from django.http import Http404
+from django.http import Http404 # type: ignore
 
-from drf_yasg.utils import swagger_serializer_method
-from eth_typing import ChecksumAddress, HexStr
-from rest_framework import serializers
-from rest_framework.exceptions import NotFound, ValidationError
+from drf_yasg.utils import swagger_serializer_method # type: ignore
+from eth_typing import ChecksumAddress, HexStr # type: ignore
+from rest_framework import serializers # type: ignore
+from rest_framework.exceptions import NotFound, ValidationError # type: ignore
 
-from gnosis.eth import EthereumClient, EthereumClientProvider
-from gnosis.eth.constants import NULL_ADDRESS
-from gnosis.eth.django.models import EthereumAddressV2Field as EthereumAddressDbField
+from gnosis.eth import EthereumClient, EthereumClientProvider # type: ignore
+from gnosis.eth.constants import NULL_ADDRESS # type: ignore
+from gnosis.eth.django.models import EthereumAddressV2Field as EthereumAddressDbField # type: ignore
 from gnosis.eth.django.models import Keccak256Field as Keccak256DbField
 from gnosis.eth.django.serializers import (
     EthereumAddressField,
